@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__inner">
+        <h1>Guess the number</h1>
+        <p class="instructions">
+          Try to guess the number between 1-100. You have 5 tries.
+        </p>
+        <div class="message" id="message" hidden></div>
+        <form class="form" id="guessForm">
+          <input type="text" class="form__input" id="guess" />
+          <button type="submit" class="button">Guess</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

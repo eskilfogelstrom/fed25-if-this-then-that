@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #4d005e;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container__inner {
+  max-width: 250px;
+  width: 100%;
+}
+
+.instructions {
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  display: block;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 0;
+  border: 1px solid rgb(0 0 0 / 0.75);
+}
+
+.button {
+  width: 100%;
+  display: block;
+  background-color: darkmagenta;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: blueviolet;
+}
+
+.message {
+  padding: 0.5rem;
+  background-color: rgb(0 0 0 / 0.5);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: ;
+}
+
+.message .button {
+  margin-top: 1rem;
+}
