@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ball {
+  background-color: #000;
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball--animated {
+  animation: shakeY 1s;
+}
+
+.ball__answer {
+  background-color: blue;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 200px;
+  color: #fff;
+}
