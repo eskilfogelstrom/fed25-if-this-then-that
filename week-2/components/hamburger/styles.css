@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  padding: 0.5rem;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: salmon;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, visibility 0.5s;
+}
+
+.navbar__menu--show {
+  visibility: visible;
+  max-height: 55px;
+}

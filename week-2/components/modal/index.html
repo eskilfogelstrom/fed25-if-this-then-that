@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="modalToggle">Launch one-off modal</button>
+    <div class="modal" id="modal">
+      <div class="modal__inner">
+        <h1>Modal</h1>
+        <button id="closeButton">Close</button>
+      </div>
+    </div>
+
+    <button data-modal="exampleModal">Launch generalized modal</button>
+    <div class="modal" id="exampleModal">
+      <div class="modal__inner">
+        <h1>Modal</h1>
+        <button data-modal-close>Close</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 0);
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.modal--show {
+  visibility: visible;
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.modal__inner {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  transition: translate 0.5s, opacity 0.5s;
+  opacity: 0;
+  translate: 0 -10%;
+}
+
+.modal--show .modal__inner {
+  opacity: 1;
+  translate: 0 0;
+}
