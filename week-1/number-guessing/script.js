@@ -1,31 +1,41 @@
-// Infinte loop for playing again
-while (true) {
-    let guesses = 5; // Variable for amoun of guesses left
-    let number = Math.floor(Math.random() * 100) + 1; // Generate random number between 1-100
+let number = Math.floor(Math.random() * 100) + 1;
 
-    // Loop while still have guesses left
-    while (guesses > 0) {
-        alert(`You have ${guesses} left`);
+let guesses = 5;
 
-        // Get user's guess
-        let guess = Number(prompt('Guess a number'));
+console.log(number);
 
-        if (guess === number) {
-            alert('You won!!!');
-            break;
-        } else if (guess < number) {
-            alert('Higher');
-        } else if (guess > number) {
-            alert('Lower');
-        }
+let guess = Number(
+  prompt(`You have ${guesses} left. Guess a number between 1-100`)
+);
 
-        guesses -= 1;
-    }
+let messageEl = document.querySelector("#message");
 
-    let answer = confirm('Play again?');
-
-    // If press cancel break out of loop
-    if (answer === false) {
-        break;
-    }
+if (number === guess) {
+  messageEl.innerHTML = "You won!";
+  messageEl.classList.add(
+    "message--correct",
+    "animate__animated",
+    "animate__shakeY"
+  );
+} else if (number < guess) {
+  messageEl.innerHTML = "Lower";
+  messageEl.classList.add(
+    "message--incorrect",
+    "animate__animated",
+    "animate__shakeX"
+  );
+} else if (number > guess) {
+  messageEl.innerHTML = "Higher";
+  messageEl.classList.add(
+    "message--incorrect",
+    "animate__animated",
+    "animate__shakeX"
+  );
 }
+
+// 1. generate random number
+// 2. get user input as number
+// 3. if secret number is equal to guess
+//      show you won
+// else
+//      show you lost
