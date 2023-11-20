@@ -8,7 +8,7 @@ let messageEl = document.querySelector("message");
 async function getData() {
   // Fetch data from Open Weather Map API, passing the input value as city
   let res = await fetch(
-    `api.openweathermap.org/data/2.5/weather?q=${cityInputEl.value}&appid=8f20807cea52eed92572aea82df038d5`
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityInputEl.value}&appid=8f20807cea52eed92572aea82df038d5`
   );
   let data = await res.json();
 
@@ -37,5 +37,6 @@ async function getData() {
 }
 
 formEl.addEventListener("submit", function e {
+  preventDefault();
   getData();
 });
